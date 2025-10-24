@@ -1,0 +1,7 @@
+<style>
+titulo {
+color: darkblue;
+text-align: center;
+font-family: 'Arial Black', sans-serif;
+}
+</style>
