@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(237, 240, 96);
+    text-align: center;
+}
+
+h1 {
+    color: rgb(34, 85, 96);
+    font-size: 3em;
+    font-weight: 500;
+    font-family: 'Tahoma', 'Comic Sans MS', sans-serif;
+    letter-spacing: -2px;
+    text-align: center;
+}
+
+@font-face {
+    font-family: 'Fuente examen';
+    src: url('../fonts/maoze.ttf');
+}
+
+h2 {
+    font-family: 'Fuente examen', sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: rgb(23, 18, 25);
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: rgb(136, 136, 136);
+    letter-spacing: 6px;
+    text-align: justify;
+}
+
+img {
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+p {
+    font-family: 'Calisto MT', 'Book Antiqua', sans-serif;
+    font-size: 0.85em;
+    color: rgb(110, 110, 110);
+    text-indent: 1.5cm;
+    text-align: center;
+    line-height: 1.5em;
+
+}
+
+a {
+    color: rgb(110, 110, 110);
+    text-decoration: none;
+}
