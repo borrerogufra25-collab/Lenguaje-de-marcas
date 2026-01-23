@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 5</title>
+    <style>
+      @keyframes animacionChula {
+        0% {
+          background-color: cadetblue;
+          transform: translateX(0px) translateY(0px);
+          font-size: 5pt;
+        }
+
+        25% {
+          background-color: yellowgreen;
+          transform: translateX(50px) translateY(0px);
+          font-size: 10pt;
+        }
+
+        50% {
+          background-color: hotpink;
+          transform: translateX(50px) translateY(50px);
+          font-size: 15pt;
+        }
+
+        75% {
+          background-color: fuchsia;
+          transform: translateX(0px) translateY(50px);
+          font-size: 10pt;
+        }
+
+        100% {
+          background-color: cadetblue;
+          transform: translateX(0px) translateY(0px);
+          font-size: 5pt;
+        }
+      }
+
+      @keyframes tembleque {
+        0% {
+          transform: rotate(0deg);
+        }
+        33% {
+          transform: rotate(2deg);
+        }
+        66% {
+          transform: rotate(-2deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      p {
+        font-family: Calibri;
+        border: solid 1px red;
+        width: 25%;
+        height: 100px;
+        padding: 40px 10px;
+        text-align: center;
+
+        /* animation: animacionChula 2s infinite alternate ;
+         animation-delay: 2s;
+        animation-fill-mode: forwards;*/
+      }
+
+      p:hover {
+        animation: tembleque 0.2s infinite linear;
+        animation-fill-mode: both;
+      }
+    </style>
+  </head>
+  <body>
+    <p>DVD</p>
+  </body>
+</html>
