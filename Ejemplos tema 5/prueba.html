@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Persiana con Submenús</title>
+
+    <style>
+        /* Fondo degradado original */
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* CONTENEDOR QUE CONTROLA EL HOVER */
+        .menu-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            /* SOLO el ancho del botón */
+        }
+
+        /* BOTÓN QUE ACTIVA EL MENÚ */
+        .boton {
+            background: rgb(40, 40, 40);
+            color: white;
+            padding: 12px 20px;
+            cursor: pointer;
+            width: 80px;
+        }
+
+        /* MENÚ DESLIZANTE */
+        .menu-contenedor {
+            width: 260px;
+            background: rgb(30, 30, 30);
+            transform: translateX(-260px);
+            /* oculto */
+            transition: transform 0.4s;
+            padding-top: 10px;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Cuando pasas el ratón por el wrapper → aparece */
+        .menu-wrapper:hover .menu-contenedor {
+            transform: translateX(0);
+        }
+
+        /* LISTA PRINCIPAL */
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Ocultar checkbox de submenús */
+        .menu input[type="checkbox"] {
+            display: none;
+        }
+
+        /* TÍTULOS DE CADA SUBMENÚ */
+        .titulo {
+            display: block;
+            padding: 12px;
+            background: rgb(0, 150, 0);
+            color: white;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        /* SUBMENÚS OCULTOS */
+        .submenu {
+            max-height: 0;
+            overflow: hidden;
+            background: rgb(60, 60, 60);
+            transition: max-height 0.4s;
+        }
+
+        /* MOSTRAR SUBMENÚ AL HACER CLIC */
+        #sub1:checked+label+.submenu,
+        #sub2:checked+label+.submenu,
+        #sub3:checked+label+.submenu {
+            max-height: 300px;
+        }
+
+        /* ENLACES DEL SUBMENÚ */
+        .submenu a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .submenu a:hover {
+            background: rgb(90, 90, 90);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- AHORA EL BOTÓN Y EL MENÚ ESTÁN JUNTOS -->
+    <div class="menu-wrapper">
+
+        <!-- BOTÓN -->
+        <div class="boton">☰ Menú</div>
+
+        <!-- MENÚ DESLIZANTE -->
+        <div class="menu-contenedor">
+            <nav class="menu">
+                <ul>
+
+                    <!-- SUBMENÚ 1 -->
+                    <li>
+                        <input type="checkbox" id="sub1">
+                        <label for="sub1" class="titulo">MENU 1</label>
+                        <ul class="submenu">
+                            <li><a href="#">1.1</a></li>
+                            <li><a href="#">1.2</a></li>
+                            <li><a href="#">1.3</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- SUBMENÚ 2 -->
+                    <li>
+                        <input type="checkbox" id="sub2">
+                        <label for="sub2" class="titulo">MENU 2</label>
+                        <ul class="submenu">
+                            <li><a href="#">2.1</a></li>
+                            <li><a href="#">2.2</a></li>
+                            <li><a href="#">2.3</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- SUBMENÚ 3 -->
+                    <li>
+                        <input type="checkbox" id="sub3">
+                        <label for="sub3" class="titulo">MENU 3</label>
+                        <ul class="submenu">
+                            <li><a href="#">3.1</a></li>
+                            <li><a href="#">3.2</a></li>
+                            <li><a href="#">3.3</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

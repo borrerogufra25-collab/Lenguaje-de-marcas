@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(68, 15, 68);
+  background-color: #440f44;
+  padding-top: 10px;
 }
 
 .menu {
@@ -13,8 +14,7 @@ body {
 .menu > li {
   position: relative;
   padding: 15px 25px;
-  color: white;
-  cursor: pointer;
+  color: #6d9a55;
 }
 
 .menu > li:hover {
@@ -37,7 +37,7 @@ body {
 
 .submenu li {
   padding: 12px 20px;
-  color: white;
+  color: #6d9a55;
 }
 
 .submenu li:hover {
