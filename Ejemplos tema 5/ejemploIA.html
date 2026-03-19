@@ -1,301 +1,320 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Tema 5 – Listas y menús</title>
 
-    <style>
-      /* ---------------------------------------------------------
+<head>
+  <meta charset="UTF-8" />
+  <title>Tema 5 – Listas y menús</title>
+
+  <style>
+    /* ---------------------------------------------------------
          RESET BÁSICO: elimina márgenes y paddings por defecto
       --------------------------------------------------------- */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      /* ---------------------------------------------------------
+    /* ---------------------------------------------------------
          ESTILOS GENERALES DEL BODY
          - Fuente
          - Fondo con degradado lineal
          - Altura mínima para ocupar toda la pantalla
       --------------------------------------------------------- */
-      body {
-        font-family: Arial, sans-serif;
-        background-image: linear-gradient(to bottom, #1e3c72, #2a5298);
-        color: #333;
-        min-height: 100vh;
-      }
+    body {
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(to bottom, #1e3c72, #2a5298);
+      color: #333;
+      min-height: 100vh;
+    }
 
-      /* ---------------------------------------------------------
+    /* ---------------------------------------------------------
          MENÚ PRINCIPAL SUPERIOR
          - Se basa en una lista UL horizontal
       --------------------------------------------------------- */
-      nav {
-        background-color: rgba(0, 0, 0, 0.2); /* fondo semitransparente */
-      }
+    nav {
+      background-color: rgba(0, 0, 0, 0.2);
+      /* fondo semitransparente */
+    }
 
-      nav ul {
-        list-style-type: none; /* sin viñetas */
-        display: flex; /* coloca los <li> en fila */
-      }
+    nav ul {
+      list-style-type: none;
+      /* sin viñetas */
+      display: flex;
+      /* coloca los <li> en fila */
+    }
 
-      nav ul li {
-        flex-grow: 1; /* cada elemento ocupa el mismo espacio */
-        text-align: center;
-        padding: 15px 10px;
-        background-color: #ffffff33; /* blanco translúcido */
-        color: white;
-        cursor: pointer;
-        transition:
-          background-color 0.3s,
-          transform 0.3s; /* animación suave */
-      }
+    nav ul li {
+      flex-grow: 1;
+      /* cada elemento ocupa el mismo espacio */
+      text-align: center;
+      padding: 15px 10px;
+      background-color: #ffffff33;
+      /* blanco translúcido */
+      color: white;
+      cursor: pointer;
+      transition:
+        background-color 0.3s,
+        transform 0.3s;
+      /* animación suave */
+    }
 
-      nav ul li:hover {
-        background-color: #ffffff88; /* más claro al pasar el ratón */
-        color: #1e3c72;
-        transform: translateY(-3px); /* se eleva ligeramente */
-      }
+    nav ul li:hover {
+      background-color: #ffffff88;
+      /* más claro al pasar el ratón */
+      color: #1e3c72;
+      transform: translateY(-3px);
+      /* se eleva ligeramente */
+    }
 
-      /* ---------------------------------------------------------
+    /* ---------------------------------------------------------
          CONTENEDOR PRINCIPAL <main>
          - Caja centrada con sombra y bordes redondeados
       --------------------------------------------------------- */
-      main {
-        max-width: 900px;
-        margin: 30px auto;
-        background-color: white;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
 
-      /* ---------------------------------------------------------
+    /* ---------------------------------------------------------
          MENÚ DE PESTAÑAS INTERNO
          - Otra lista UL horizontal
       --------------------------------------------------------- */
-      .tabs-menu {
-        list-style-type: none;
-        display: flex;
-        margin-bottom: 15px;
-        border-bottom: 2px solid #ddd;
-      }
+    .tabs-menu {
+      list-style-type: none;
+      display: flex;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ddd;
+    }
 
-      .tabs-menu li {
-        margin-right: 10px;
-      }
+    .tabs-menu li {
+      margin-right: 10px;
+    }
 
-      .tabs-menu a {
-        display: inline-block;
-        padding: 8px 15px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        background-color: #eee;
-        color: #333;
-        text-decoration: none;
-        transition: background-color 0.3s;
-      }
+    .tabs-menu a {
+      display: inline-block;
+      padding: 8px 15px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: #eee;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
 
-      .tabs-menu a:hover {
-        background-color: #ddd;
-      }
+    .tabs-menu a:hover {
+      background-color: #ddd;
+    }
 
-      /* ---------------------------------------------------------
+    /* ---------------------------------------------------------
          SISTEMA DE PESTAÑAS CON :target
          - Todas las secciones ocultas por defecto
       --------------------------------------------------------- */
-      main section {
-        display: none;
-        padding-top: 10px;
-      }
+    main section {
+      display: none;
+      padding-top: 10px;
+    }
 
-      /* Se muestra solo la sección cuyo id coincide con el hash */
-      main section:target {
-        display: block;
-      }
+    /* Se muestra solo la sección cuyo id coincide con el hash */
+    main section:target {
+      display: block;
+    }
 
-      /* Si no hay hash (#), se muestra la sección intro */
-      #intro:target,
-      body:not(:target) #intro {
-        display: block;
-      }
+    /* Si no hay hash (#), se muestra la sección intro */
+    #intro:target,
+    body:not(:target) #intro {
+      display: block;
+    }
 
-      /* ---------------------------------------------------------
+    /* ---------------------------------------------------------
          DEMOSTRACIÓN DE LISTAS
       --------------------------------------------------------- */
-      .listas-demo ul {
-        margin-left: 20px;
-        margin-bottom: 10px;
-      }
+    .listas-demo ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
 
-      .disc {
-        list-style-type: disc; /* viñeta redonda rellena */
-      }
+    .disc {
+      list-style-type: disc;
+      /* viñeta redonda rellena */
+    }
 
-      .circle {
-        list-style-type: circle; /* viñeta redonda hueca */
-      }
+    .circle {
+      list-style-type: circle;
+      /* viñeta redonda hueca */
+    }
 
-      .square {
-        list-style-type: square; /* viñeta cuadrada */
-      }
+    .square {
+      list-style-type: square;
+      /* viñeta cuadrada */
+    }
 
-      .decimal {
-        list-style-type: decimal; /* lista numerada */
-      }
+    .decimal {
+      list-style-type: decimal;
+      /* lista numerada */
+    }
 
-      .none {
-        list-style-type: none; /* sin viñetas */
-      }
+    .none {
+      list-style-type: none;
+      /* sin viñetas */
+    }
 
-      /* Ejemplo de list-style abreviado con imagen */
-      .custom-marker {
-        list-style: url("https://via.placeholder.com/10/1e3c72/ffffff") inside;
-      }
+    /* Ejemplo de list-style abreviado con imagen */
+    .custom-marker {
+      list-style: url("https://via.placeholder.com/10/1e3c72/ffffff") inside;
+    }
 
-      /* ---------------------------------------------------------
+    /* ---------------------------------------------------------
          CAJA CON DEGRADADO Y TRANSFORMACIÓN
       --------------------------------------------------------- */
-      .caja-transform {
-        width: 200px;
-        height: 200px;
-        margin: 20px auto;
-        background-image: radial-gradient(circle at center, #ffffff, #1e3c72);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: bold;
-        transition: transform 0.5s;
-      }
+    .caja-transform {
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      background-image: radial-gradient(circle at center, #ffffff, #1e3c72);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      transition: transform 0.5s;
+    }
 
-      .caja-transform:hover {
-        transform: rotate(10deg) scale(1.05); /* gira y aumenta */
-      }
+    .caja-transform:hover {
+      transform: rotate(10deg) scale(1.05);
+      /* gira y aumenta */
+    }
 
-      /* ---------------------------------------------------------
+    /* ---------------------------------------------------------
          ANIMACIÓN CON @keyframes
          - Cambia color y posición repetidamente
       --------------------------------------------------------- */
-      @keyframes parpadeo {
-        0% {
-          background-color: #ffcc00;
-          transform: translateX(0);
-        }
-        50% {
-          background-color: #ff8800;
-          transform: translateX(10px);
-        }
-        100% {
-          background-color: #ffcc00;
-          transform: translateX(0);
-        }
+    @keyframes parpadeo {
+      0% {
+        background-color: #ffcc00;
+        transform: translateX(0);
       }
 
-      .aviso-animado {
-        display: inline-block;
-        padding: 8px 12px;
-        border-radius: 4px;
-        color: #333;
-        animation: parpadeo 1.5s infinite; /* aplica la animación */
+      50% {
+        background-color: #ff8800;
+        transform: translateX(10px);
       }
-    </style>
-  </head>
 
-  <body>
-    <!-- ---------------------------------------------------------
+      100% {
+        background-color: #ffcc00;
+        transform: translateX(0);
+      }
+    }
+
+    .aviso-animado {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 4px;
+      color: #333;
+      animation: parpadeo 1.5s infinite;
+      /* aplica la animación */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ---------------------------------------------------------
          MENÚ PRINCIPAL SUPERIOR
     --------------------------------------------------------- -->
-    <nav>
-      <ul>
-        <li><a href="#intro">Introducción</a></li>
-        <li><a href="#listas">Listas</a></li>
-        <li><a href="#efectos">Efectos CSS</a></li>
-        <li><a href="#animaciones">Animaciones</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#intro">Introducción</a></li>
+      <li><a href="#listas">Listas</a></li>
+      <li><a href="#efectos">Efectos CSS</a></li>
+      <li><a href="#animaciones">Animaciones</a></li>
+    </ul>
+  </nav>
 
-    <main>
-      <!-- ---------------------------------------------------------
+  <main>
+    <!-- ---------------------------------------------------------
            MENÚ DE PESTAÑAS INTERNO
       --------------------------------------------------------- -->
-      <ul class="tabs-menu">
-        <li><a href="#intro">Intro</a></li>
-        <li><a href="#listas">Listas</a></li>
-        <li><a href="#efectos">Degradados y transformaciones</a></li>
-        <li><a href="#animaciones">Animaciones</a></li>
-      </ul>
+    <ul class="tabs-menu">
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#listas">Listas</a></li>
+      <li><a href="#efectos">Degradados y transformaciones</a></li>
+      <li><a href="#animaciones">Animaciones</a></li>
+    </ul>
 
-      <!-- ---------------------------------------------------------
+    <!-- ---------------------------------------------------------
            SECCIÓN 1: INTRODUCCIÓN
       --------------------------------------------------------- -->
-      <section id="intro">
-        <h1>Tema 5: Listas y menús</h1>
-        <p>
-          Este ejemplo recoge varios conceptos: listas, menús con
-          <code>ul/li</code>, pseudoclases, degradados, transiciones,
-          transformaciones y animaciones.
-        </p>
+    <section id="intro">
+      <h1>Tema 5: Listas y menús</h1>
+      <p>
+        Este ejemplo recoge varios conceptos: listas, menús con
+        <code>ul/li</code>, pseudoclases, degradados, transiciones,
+        transformaciones y animaciones.
+      </p>
 
-        <!-- Texto animado con @keyframes -->
-        <p class="aviso-animado">
-          OJOCUIDAO: no caer en el síndrome de la página inquieta.
-        </p>
-      </section>
+      <!-- Texto animado con @keyframes -->
+      <p class="aviso-animado">
+        OJOCUIDAO: no caer en el síndrome de la página inquieta.
+      </p>
+    </section>
 
-      <!-- ---------------------------------------------------------
+    <!-- ---------------------------------------------------------
            SECCIÓN 2: LISTAS
       --------------------------------------------------------- -->
-      <section id="listas" class="listas-demo">
-        <h2>Listas y tipos de marcadores</h2>
+    <section id="listas" class="listas-demo">
+      <h2>Listas y tipos de marcadores</h2>
 
-        <h3>Listas sin ordenar</h3>
-        <ul class="disc">
-          <li>Elemento con marcador disc</li>
-          <li>Otro elemento</li>
-        </ul>
+      <h3>Listas sin ordenar</h3>
+      <ul class="disc">
+        <li>Elemento con marcador disc</li>
+        <li>Otro elemento</li>
+      </ul>
 
-        <ul class="circle">
-          <li>Elemento con marcador circle</li>
-          <li>Otro elemento</li>
-        </ul>
+      <ul class="circle">
+        <li>Elemento con marcador circle</li>
+        <li>Otro elemento</li>
+      </ul>
 
-        <ul class="square">
-          <li>Elemento con marcador square</li>
-          <li>Otro elemento</li>
-        </ul>
+      <ul class="square">
+        <li>Elemento con marcador square</li>
+        <li>Otro elemento</li>
+      </ul>
 
-        <h3>Lista ordenada</h3>
-        <ol class="decimal">
-          <li>Primer elemento</li>
-          <li>Segundo elemento</li>
-          <li>Tercer elemento</li>
-        </ol>
+      <h3>Lista ordenada</h3>
+      <ol class="decimal">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+      </ol>
 
-        <h3>Lista sin marcadores</h3>
-        <ul class="none">
-          <li>Elemento sin marcador 1</li>
-          <li>Elemento sin marcador 2</li>
-        </ul>
+      <h3>Lista sin marcadores</h3>
+      <ul class="none">
+        <li>Elemento sin marcador 1</li>
+        <li>Elemento sin marcador 2</li>
+      </ul>
 
-        <h3>Marcador gráfico y abreviado</h3>
-        <ul class="custom-marker">
-          <li>Elemento con marcador personalizado</li>
-          <li>Otro elemento con marcador personalizado</li>
-        </ul>
-      </section>
+      <h3>Marcador gráfico y abreviado</h3>
+      <ul class="custom-marker">
+        <li>Elemento con marcador personalizado</li>
+        <li>Otro elemento con marcador personalizado</li>
+      </ul>
+    </section>
 
-      <!-- ---------------------------------------------------------
+    <!-- ---------------------------------------------------------
            SECCIÓN 3: EFECTOS
       --------------------------------------------------------- -->
-      <section id="efectos">
-        <h2>Degradados y transformaciones</h2>
-        <p>
-          La caja siguiente tiene un fondo con degradado radial y una
-          transformación en <code>:hover</code>
-        </p>
-      </section>
-    </main>
-  </body>
+    <section id="efectos">
+      <h2>Degradados y transformaciones</h2>
+      <p>
+        La caja siguiente tiene un fondo con degradado radial y una
+        transformación en <code>:hover</code>
+      </p>
+    </section>
+  </main>
+</body>
+
 </html>

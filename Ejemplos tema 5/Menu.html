@@ -1,153 +1,154 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-    <style>
-      * {
-        box-sizing: border-box;
-      }
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 
-      body {
-        width: 85%;
-        margin: 0, auto;
-        background-color: antiquewhite;
-      }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-      header h1 {
-        width: 100%;
-        text-align: center;
-        background-image: linear-gradient(30deg, rgb(123, 45, 67));
-      }
+    body {
+      width: 85%;
+      margin: 0, auto;
+      background-color: antiquewhite;
+    }
 
-      nav ul {
-        list-style-type: none;
-        padding-left: 0%;
-        display: flex;
-        justify-content: space-around;
-        padding-bottom: 0px;
-      }
+    header h1 {
+      width: 100%;
+      text-align: center;
+      background-image: linear-gradient(30deg, rgb(123, 45, 67));
+    }
 
-      nav ul a {
-        background-color: red;
-        color: white;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-        flex: 1 1 20%;
-        text-align: center;
-        border-left: solid ivory 1px;
-        transition: all 2s;
-      }
+    nav ul {
+      list-style-type: none;
+      padding-left: 0%;
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 0px;
+    }
 
-      nav ul li :hover {
-        /*EL hover es para cuando el cursor pasa por encima del elemento*/
-        background-color: pink;
-        color: red;
-      }
+    nav ul a {
+      background-color: red;
+      color: white;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      flex: 1 1 20%;
+      text-align: center;
+      border-left: solid ivory 1px;
+      transition: all 2s;
+    }
 
-      nav ul li a {
-        text-decoration: none;
-        color: white;
-      }
+    nav ul li :hover {
+      /*EL hover es para cuando el cursor pasa por encima del elemento*/
+      background-color: pink;
+      color: red;
+    }
 
-      nav ul li a:hover {
-        color: red;
-      }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
 
-      main {
-        background-color: rgb(229, 117, 117);
-        text-align: justify;
-        padding: 10px;
-      }
+    nav ul li a:hover {
+      color: red;
+    }
 
-      main p {
-        margin-top: 0px;
-      }
-      section {
-        display: none;
-      }
-      section:target {
-        display: inherit;
-      }
-    </style>
-  </head>
+    main {
+      background-color: rgb(229, 117, 117);
+      text-align: justify;
+      padding: 10px;
+    }
 
-  <body>
-    <header>
-      <h1>Mi página web</h1>
-    </header>
-    <nav>
-      <ul>
-        <a href="#inicio">
-          <li><i class="bi bi-sign-stop"></i></li>
-        </a>
-        <a href="#quienes-somos">
-          <li>Quiénes somos</li>
-        </a>
-        <a href="#donde-estamos">
-          <li>Dónde estamos</li>
-        </a>
-        <a href="#contacto">
-          <li>Contacto</li>
-        </a>
-        <a href="#ayuda">
-          <li>Ayuda</li>
-        </a>
-      </ul>
-    </nav>
-    <main>
-      <section id="inicio">
-        <h2>Inicio</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
-          quod placeat aspernatur laudantium at. Corrupti consectetur numquam
-          aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
-          ipsum quae.
-        </p>
-      </section>
-      <section id="quienes-somos">
-        <h2>Quiénes somos</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
-          quod placeat aspernatur laudantium at. Corrupti consectetur numquam
-          aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
-          ipsum quae.
-        </p>
-      </section>
-      <section id="donde-estamos">
-        <h2>Dónde estamos</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
-          quod placeat aspernatur laudantium at. Corrupti consectetur numquam
-          aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
-          ipsum quae.
-        </p>
-      </section>
-      <section id="contacto">
-        <h2>Contacto</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
-          quod placeat aspernatur laudantium at. Corrupti consectetur numquam
-          aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
-          ipsum quae.
-        </p>
-      </section>
-      <section id="ayuda">
-        <h2>Ayuda</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
-          quod placeat aspernatur laudantium at. Corrupti consectetur numquam
-          aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
-          ipsum quae.
-        </p>
-      </section>
-    </main>
-  </body>
+    main p {
+      margin-top: 0px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section:target {
+      display: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Mi página web</h1>
+  </header>
+  <nav>
+    <ul>
+      <a href="#inicio">
+        <li><i class="bi bi-sign-stop"></i></li>
+      </a>
+      <a href="#quienes-somos">
+        <li>Quiénes somos</li>
+      </a>
+      <a href="#donde-estamos">
+        <li>Dónde estamos</li>
+      </a>
+      <a href="#contacto">
+        <li>Contacto</li>
+      </a>
+      <a href="#ayuda">
+        <li>Ayuda</li>
+      </a>
+    </ul>
+  </nav>
+  <main>
+    <section id="inicio">
+      <h2>Inicio</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
+        quod placeat aspernatur laudantium at. Corrupti consectetur numquam
+        aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
+        ipsum quae.
+      </p>
+    </section>
+    <section id="quienes-somos">
+      <h2>Quiénes somos</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
+        quod placeat aspernatur laudantium at. Corrupti consectetur numquam
+        aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
+        ipsum quae.
+      </p>
+    </section>
+    <section id="donde-estamos">
+      <h2>Dónde estamos</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
+        quod placeat aspernatur laudantium at. Corrupti consectetur numquam
+        aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
+        ipsum quae.
+      </p>
+    </section>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
+        quod placeat aspernatur laudantium at. Corrupti consectetur numquam
+        aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
+        ipsum quae.
+      </p>
+    </section>
+    <section id="ayuda">
+      <h2>Ayuda</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
+        quod placeat aspernatur laudantium at. Corrupti consectetur numquam
+        aut saepe quos commodi maxime voluptatum at! Aut eveniet beatae neque
+        ipsum quae.
+      </p>
+    </section>
+  </main>
+</body>
+
 </html>
