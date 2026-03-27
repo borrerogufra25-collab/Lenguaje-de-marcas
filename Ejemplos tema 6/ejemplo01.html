@@ -26,7 +26,15 @@
             vertical-align: bottom;
             padding: 2px;
             border: 1px solid black;
+        }
 
+        tr:first-child th {
+            background-color: fuchsia;
+        }
+
+        tr:nth-child(odd) td,
+        tr:nth-child(even) th {
+            background-color: yellow;
         }
     </style>
 
@@ -37,7 +45,6 @@
     <h1>El tiempo</h1>
     <table summary="Esto no aparece pero dice de que va la tabla">
         <caption>Previsión de 7 días</caption>
-        <!-- esto es el encabezado de la página -->
         <tr>
             <th>Día</th>
             <th>18/3</th>
@@ -62,7 +69,6 @@
 
         <tr>
             <th rowspan="2">% Lluvia</th>
-            <!-- Combina una celda con la que tiene debajo -->
             <td>5%</td>
             <td>12%</td>
             <td>63%</td>
@@ -78,7 +84,6 @@
             <td>Soleado</td>
             <td>Nublado</td>
             <td colspan="2">Lluvia</td>
-            <!-- El colspan junta celdas -->
             <td>Soleado</td>
         </tr>
     </table>
