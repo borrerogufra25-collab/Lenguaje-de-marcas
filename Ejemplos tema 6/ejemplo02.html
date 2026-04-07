@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input:focus {
+            background-color: red;
+            /*Esto vale para cuando el campo es seleccionado se cambia el color */
+            outline: none;
+            /*Esto vale para el auto marcado de los campos por el navegador no lo haga*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Registro de usuario</h1>
+    <form name="registro" action="#" method="post" ovalidate enctype="multipart/form-data" autocomplete></form>
+
+    <label for="nombre">* Nombre</label>
+    <input type="text" name="nombre" id="nombre" required value="Pepito">
+    <br>
+    <br>
+    <label for="apellidos">Apellidos</label>
+    <input type="text" name="apellidos" id="apellidos" placeholder="Es el puto apellido" autofocus>
+
+    <p><input type="submit" name="enviar" value="A mandar"></p>
+    <input type="reset" name="Borrar" value="Borrar">
+
+</body>
+
+</html>
