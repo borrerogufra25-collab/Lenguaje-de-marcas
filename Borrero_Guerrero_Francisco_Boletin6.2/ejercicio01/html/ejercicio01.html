@@ -8,33 +8,48 @@
 </head>
 
 <body>
+    <fieldset>
+        <form name="ejercicio_1" method="post" autocomplete="on"></form>
 
-    <form name="ejercicio_1" method="post" autocomplete="on"></form>
+        <legend>Datos personales</legend>
 
-    <legend>Datos personales</legend>
+        <label for="nombre">* Nombre</label>
+        <input type="text" id="nombre" name="nombre" required autocomplete="on" pattern="[A-Za-z]{3,20}">
 
-    <label for="nombre">* Nombre</label>
-    <input type="text" id="nombre" name="nombre" required autocomplete="on" pattern="[A-Za-z]{3,20}">
+        <br>
 
-    <br>
+        <label for="apellido">* Apellidos</label>
+        <input type="text" id="apellido" name="apellido" required autocomplete="on" pattern="[A-Za-z]{3,20}">
 
-    <label for="apellido">* Apellidos</label>
-    <input type="text" id="apellido" name="apellido" required autocomplete="on" pattern="[A-Za-z]{3,20}">
+        <br>
 
-    <br>
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="0" max="120" step="1">
 
-    <label for="edad">Edad</label>
-    <input type="number" id="edad" name="edad" min="0" max="120" step="1">
+        <br>
 
-    <br>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" autocomplete="on">
 
-    <label for="email">Email</label>
-    <input type="text">
+        <br>
 
-    <br>
+        <label for="navegador">Elija su navegador favorito</label>
+        <input type="text" id="navegador" name="navegador" list="opciones" placeholder="Doble click para sugerencias">
+        <datalist name="navegador" id="opciones">
+            <option value="Google Chrome">Google Chrome</option>
+            <option value="Safari">Safari</option>
+            <option value="Microsoft Edge">Microsoft Edge</option>
+            <option value="Mozilla Firefox">Mozilla Firefox</option>
+            <option value="Opera">Opera</option>
+            <option value="Brave">Brave</option>
+            <option value="DuckDuckGo Browser">DuckDuckGo Browser</option>
+        </datalist>
+        <br>
+        <input type="submit" value="Enviar" name="enviar">
+        <input type="reset" value="Borrar" name="borrar">
+    </fieldset>
 
-    <label for="navegador">Su navegador favorito</label>
-    <input type="text">
+    <!-- TODO -->
 
 </body>
 
