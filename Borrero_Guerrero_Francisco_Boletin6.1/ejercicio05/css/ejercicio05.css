@@ -4,7 +4,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
 }
 
 table {
@@ -19,6 +18,14 @@ td {
   font-size: 25px;
 }
 
+th {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: normal;
+}
+
 tr:nth-child(odd) td:nth-child(odd) {
   background-color: #f0d9b5;
 }
@@ -31,14 +38,4 @@ tr:nth-child(even) td:nth-child(odd) {
 }
 tr:nth-child(even) td:nth-child(even) {
   background-color: #f0d9b5;
-}
-
-tr:nth-child(n) td:first-child,
-tr:nth-child(n) td:last-child {
-  background-color: white;
-}
-
-tr:first-child td,
-tr:last-child td {
-  background-color: white !important;
 }
