@@ -77,3 +77,15 @@ select {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
 }
+
+fieldset:hover {
+  background-color: #ff9;
+}
+
+fieldset:last-child {
+  background-color: transparent;
+}
+
+input:hover {
+  border-color: #e6b700;
+}

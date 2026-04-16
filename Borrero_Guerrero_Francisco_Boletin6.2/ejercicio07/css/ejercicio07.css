@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+form {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  max-height: 600px;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+legend {
+  font-size: 25px;
+  font-weight: bold;
+  color: #251d1d;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  color: #555252;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px 15px;
+  border: 2px solid #a478d1;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+input[type="submit"] {
+  margin-top: 16px;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+}
+
+input[type="submit"]:hover {
+  background: #5a6fd6;
+  transform: translateY(-2px);
+}
