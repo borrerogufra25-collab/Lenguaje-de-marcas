@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejemplo Bootstrap</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ALERTA -->
+    <div class="container mt-4">
+        <div class="alert alert-success text-center">
+            Bienvenido a este ejemplo de Bootstrap 5
+        </div>
+    </div>
+
+    <!-- GRID + CARDS -->
+    <div class="container mt-4">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="https://picsum.photos/400/200" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">Ejemplo de tarjeta con Bootstrap.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEjemplo">
+                            Abrir modal
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="https://picsum.photos/401/200" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <p class="card-text">Bootstrap facilita diseños responsivos.</p>
+                        <a href="#" class="btn btn-outline-secondary">Más info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="https://picsum.photos/402/200" class="card-img-top" alt="img">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 3</h5>
+                        <p class="card-text">Componentes listos para usar.</p>
+                        <a href="#" class="btn btn-success">Aceptar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="modalEjemplo" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ejemplo de Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Este es un modal de Bootstrap 5. Puedes usarlo para mensajes, formularios o confirmaciones.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
