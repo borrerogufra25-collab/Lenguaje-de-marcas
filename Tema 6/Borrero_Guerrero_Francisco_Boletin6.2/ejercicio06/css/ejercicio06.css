@@ -1,0 +1,91 @@
+main {
+  width: 600px;
+  margin: 40px auto;
+}
+
+fieldset {
+  border: none;
+}
+
+.fila-formulario {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: flex-start;
+}
+
+.titulo {
+  width: 200px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.requerido {
+  color: red;
+  font-size: 20px;
+}
+
+.contenedor-campos {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 30px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  border: 1px solid grey;
+  padding: 5px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.campo label {
+  font-size: 11px;
+  color: grey;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.w-69 {
+  width: 69%;
+}
+
+.w-45 {
+  width: 45%;
+}
+.w-25 {
+  width: 25%;
+}
+
+.pie-formulario {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  text-align: right;
+}
+
+#alta {
+  font-weight: bold;
+  background-color: #f4f5bc;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 15px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+fieldset:hover {
+  background-color: #ff9;
+}
+
+fieldset:last-child {
+  background-color: transparent;
+}
+
+input:hover {
+  border-color: #e6b700;
+}

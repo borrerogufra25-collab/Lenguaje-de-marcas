@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input:focus {
+            background-color: red;
+            /*Esto vale para cuando el campo es seleccionado se cambia el color */
+            outline: none;
+            /*Esto vale para el auto marcado de los campos por el navegador no lo haga*/
+        }
+
+        /* El corchete es los input que tengan un tipo radio, asi es más específico */
+        input[type="radio"]:checked+label {
+            color: red;
+            /* Esto cambia el label que está seleccionado por el check */
+        }
+
+        div.columnas {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        div.columnas div {
+            flex: 1 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Registro de usuario</h1>
+    <form name="registro" action="#" method="post" ovalidate enctype="multipart/form-data" autocomplete></form>
+
+    <label for="nombre">* Nombre</label>
+    <input type="text" name="nombre" id="nombre" required value="Pepito">
+    <br>
+    <br>
+    <label for="apellidos">Apellidos</label>
+    <input type="text" name="apellidos" id="apellidos" placeholder="Es el puto apellido" autofocus size="10"
+        maxlength="5">
+
+    <p>
+        <label for="sexo">Sexo</label><br>
+        <input type="radio" name="sexo" value="m"><label>Masculino<br></label>
+        <input type="radio" name="sexo" value="f"><label>Femenino<br></label>
+        <input type="radio" name="sexo" value="o"><label>Otro<br></label>
+    </p>
+    <div class="columnas">
+        <label>Intereses</label>
+        <div>
+            <input type="checkbox" name="cocina" value="cocina"><label for="cocina">Cocinar</label><br>
+            <input type="checkbox" name="Deporte" value="Deporte"><label for="Deporte">Deporte</label><br>
+            <input type="checkbox" name="Series" value="Series"><label for="Series">Series</label><br>
+
+        </div>
+        <div>
+            <input type="checkbox" name="Peliculas" value="Peliculas"><label for="Peliculas">Peliculas</label><br>
+            <input type="checkbox" name="Mirar cuadros al reves" value="Mirar cuadros al reves"><label
+                for="Mirar cuadros al reves">Mirar cuadros al reves</label><br>
+            <input type="checkbox" name="Viajar" value="Viajar"><label for="Viajar">Viajar</label><br>
+
+        </div>
+        <div>
+            <input type="checkbox" name="Videojuegos" value="Videojuegos"><label
+                for="Videojuegos">Videojuegos</label><br>
+            <input type="checkbox" name="Pellizcar mariposas" value="Pellizcar mariposas"><label
+                for="Pellizcar mariposas">Pellizcar mariposas</label><br>
+            <input type="checkbox" name="Salir" value="Salir"><label for="Salir">Salir</label><br>
+
+        </div>
+        <div>
+            <input type="checkbox" name="Pintar piedras" value="Pintar piedras"><label for="Pintar piedras">Pintar
+                piedras</label><br>
+            <input type="checkbox" name="Escupir arriba" value="Escupir arriba"><label for="Escupir arriba">Escupir
+                arriba</label><br>
+            <input type="checkbox" name="Respirar" value="Respirar"><label for="Respirar">Respirar</label><br>
+
+        </div>
+
+    </div>
+
+    <p><input type="submit" name="enviar" value="A mandar"></p>
+    <input type="reset" name="Borrar" value="Borrar">
+
+</body>
+
+</html>

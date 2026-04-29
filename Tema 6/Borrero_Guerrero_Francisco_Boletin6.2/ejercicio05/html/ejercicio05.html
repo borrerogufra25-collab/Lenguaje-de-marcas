@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+
+    <link rel="stylesheet" href="../css/ejercicio05.css">
+
+</head>
+
+<body>
+    <main>
+        <h2>Formulario de alta</h2>
+        <form method="post" action="#">
+
+            <fieldset>
+                <div class="fila-formulario">
+                    <label class="titulo">Nombre y apellidos <span class="requerido">*</span></label>
+                    <div class="contenedor-campos">
+                        <div class="campo w-45">
+                            <input id="nombre" name="nombre" value="" />
+                            <label for="nombre">Nombre</label>
+                        </div>
+                        <div class="campo w-69">
+                            <input id="apellido1" name="apellido1" value="" />
+                            <label for="apellido1">Primer apellido</label>
+                        </div>
+                        <div class="campo w-69">
+                            <input id="apellido2" name="apellido2" value="" />
+                            <label for="apellido2">Segundo apellido</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="fila-formulario">
+                    <label class="titulo">Dirección <span class="requerido">*</span></label>
+                    <div class="contenedor-campos">
+                        <div class="campo w-69">
+                            <input id="direccion" name="direccion" value="" />
+                            <label for="direccion">Calle, número, piso, puerta</label>
+                        </div>
+                        <div class="campo w-25">
+                            <input id="codigopostal" name="codigopostal" value="" />
+                            <label for="codigopostal">Código postal</label>
+                        </div>
+                        <div class="campo w-45">
+                            <input id="municipio" name="municipio" value="" />
+                            <label for="municipio">Municipio</label>
+                        </div>
+                        <div class="campo w-25">
+                            <select id="provincia" name="provincia">
+                                <option value=""></option>
+                                <option value="provincia1">Provincia 1</option>
+                                <option value="provincia2">Provincia 2</option>
+                                <option value="provincia3">Provincia 3</option>
+                            </select>
+                            <label for="provincia">Provincia</label>
+                        </div>
+                        <div class="campo w-45">
+                            <select id="pais" name="pais">
+                                <option value=""></option>
+                                <option value="pais1">País 1</option>
+                                <option value="pais2">País 2</option>
+                                <option value="pais3">País 3</option>
+                            </select>
+                            <label for="pais">País</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="fila-formulario">
+                    <label class="titulo">Email</label>
+                    <div class="contenedor-campos">
+                        <div class="campo w-69">
+                            <input id="email" name="email" value="" />
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="fila-formulario">
+                    <label class="titulo">Teléfono <span class="requerido">*</span></label>
+                    <div class="contenedor-campos">
+                        <div class="campo w-45">
+                            <input id="fijo" name="fijo" type="tel" required>
+                            <label for="fijo">Teléfono fijo</label>
+                        </div>
+
+                        <div class="campo w-45">
+                            <input id="movil" name="movil" type="tel" required>
+                            <label for="movil">Teléfono móvil</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="pie-formulario">
+                <input id="alta" type="submit" value="Darme de alta &rarr;" />
+            </div>
+        </form>
+    </main>
+</body>

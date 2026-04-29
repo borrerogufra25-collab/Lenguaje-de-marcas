@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+
+    <link rel="stylesheet" href="../css/ejercicio02.css">
+
+</head>
+
+<body>
+
+    <h1>Registro de usuario</h1>
+
+    <form name="ejercicio_2" method="post" autocomplete="on">
+
+        <label for="nombre">Nombre y apellidos:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br>
+
+        <label for="usuario">Nombre de usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <br>
+
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" name="pass" required>
+
+        <br>
+
+        <label for="pass2">Repetir contraseña:</label>
+        <input type="password" id="pass2" name="pass2" required>
+
+        <br>
+
+        <label for="genero">Género:</label>
+        <input type="radio" name="genero" value="M"> Masculino
+        <input type="radio" name="genero" value="F"> Femenino
+        <input type="radio" name="genero" value="O"> Otro
+
+        <br>
+
+        <label for="fecha">Fecha de nacimiento:</label>
+        <input type="date" id="fecha" name="fecha">
+
+        <br>
+
+        <fieldset>
+            <legend>Aficiones:</legend>
+            <label><input type="checkbox" name="aficiones" value="musica"> Música</label><br>
+            <label><input type="checkbox" name="aficiones" value="cine"> Cine</label><br>
+            <label><input type="checkbox" name="aficiones" value="lectura"> Lectura</label><br>
+            <label><input type="checkbox" name="aficiones" value="deporte"> Deporte</label><br>
+            <label><input type="checkbox" name="aficiones" value="viajar"> Viajar</label><br>
+            <label><input type="checkbox" name="aficiones" value="videojuegos"> Videojuegos</label><br>
+            <label><input type="checkbox" name="aficiones" value="cocina"> Cocina</label><br>
+            <label><input type="checkbox" name="aficiones" value="fotografia"> Fotografía</label><br>
+            <label><input type="checkbox" name="aficiones" value="pintura"> Pintura</label><br>
+            <label><input type="checkbox" name="aficiones" value="baile"> Baile</label><br>
+            <label><input type="checkbox" name="aficiones" value="senderismo"> Senderismo</label><br>
+            <label><input type="checkbox" name="aficiones" value="animales"> Animales</label><br>
+        </fieldset>
+
+        <br>
+
+        <label for="enviar">Enviar formulario:</label><br>
+        <input type="image" id="enviar" name="enviar" src="../img/enviar.png" alt="Enviar" width="130">
+
+    </form>
+
+</body>
+
+</html>

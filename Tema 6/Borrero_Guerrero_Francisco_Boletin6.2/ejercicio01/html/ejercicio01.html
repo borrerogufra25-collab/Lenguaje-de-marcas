@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+
+    <link rel="stylesheet" href="../css/ejercicio01.css">
+
+</head>
+
+<body>
+
+    <form name="ejercicio_1" method="post" autocomplete="on">
+
+        <legend>Datos personales</legend>
+
+        <label for="nombre">* Nombre</label>
+        <input type="text" id="nombre" name="nombre" required autocomplete="on" pattern="[A-Za-z]{3,20}">
+
+        <br>
+
+        <label for="apellido">* Apellidos</label>
+        <input type="text" id="apellido" name="apellido" required autocomplete="on" pattern="[A-Za-z]{3,20}">
+
+        <br>
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad" min="0" max="120" step="1">
+
+        <br>
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" autocomplete="on">
+
+        <br>
+
+        <label for="navegador">Elija su navegador favorito</label>
+        <input type="text" id="navegador" name="navegador" list="opciones" placeholder="Doble click para sugerencias">
+        <datalist name="navegador" id="opciones">
+            <option value="Google Chrome">Google Chrome</option>
+            <option value="Safari">Safari</option>
+            <option value="Microsoft Edge">Microsoft Edge</option>
+            <option value="Mozilla Firefox">Mozilla Firefox</option>
+            <option value="Opera">Opera</option>
+            <option value="Brave">Brave</option>
+            <option value="DuckDuckGo Browser">DuckDuckGo Browser</option>
+        </datalist>
+        <br>
+        <input type="submit" value="Enviar" name="enviar">
+        <input type="reset" value="Borrar" name="borrar">
+
+
+    </form>
+
+</body>
+
+</html>

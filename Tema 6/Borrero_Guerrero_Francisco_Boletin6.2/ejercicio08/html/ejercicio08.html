@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+
+    <link rel="stylesheet" href="../css/ejercicio08.css">
+
+</head>
+
+<body>
+
+    <h1>Reserva de Hotel</h1>
+
+    <form>
+        <fieldset>
+            <label for="huespedes">Número de huéspedes</label>
+            <input type="number" name="huespedes" id="huespedes" min="1" value="1">
+
+            <label for="fecha">Fecha de entrada</label>
+            <input type="date" name="fecha" id="fecha" required>
+
+            <label for="fecha2">Fecha de salida</label>
+            <input type="date" name="fecha2" id="fecha2" required>
+
+            <label for="tipo">Tipo de habitación</label>
+            <select name="tipo" id="tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Individual">Individual</option>
+                <option value="Doble">Doble</option>
+                <option value="Suite Deluxe">Suite Deluxe</option>
+                <option value="Familiar">Familiar</option>
+                <option value="jeje">Easter Egg jeje</option>
+            </select>
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" name="correo" id="correo" placeholder="tuemail@ejemplo.com" required>
+
+            <input id="enviar" type="submit" value="Enviar reserva &rarr;" />
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
