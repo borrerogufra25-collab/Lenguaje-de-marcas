@@ -14,7 +14,7 @@
     <!-- Cabecera -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark container">
-            <a class="navbar-brand fw-bold" href="#">Tiramisú Perfecto</a>
+            <a class="navbar-brand fw-bold" href="#">El Tiramisú Perfecto</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,6 +36,8 @@
             </div>
         </nav>
     </header>
+
+    <hr>
 
     <!-- Modal -->
     <div class="modal" id="modal">
@@ -83,10 +85,10 @@
                     de receta fácil y rápida que podemos hacer en menos de 1 hora. Esta receta de postre tan famoso es
                     poco dulzona, así que si no eres un amante del dulce te vendrá genial el <strong>toque amargo del
                         café.</strong></p>
-                <a href="#receta" class="btn btn-info">Ver receta</a>
+                <a href="#receta" class="btn btn-info mb-3">Ver receta</a>
             </div>
             <div class="col-md-6">
-                <img src="#" class="img-fluid rounded" alt="">
+                <img src="../img/1.jpg" class="img-fluid rounded" alt="Foto de tiramisú">
             </div>
         </div>
     </section>
@@ -170,6 +172,7 @@
                     Para terminar, espolvoreamos cacao puro por toda la superficie y reservamos el tiramisú en la nevera
                     hasta el momento de servir.
                 </p>
+
                 <h3>Resumen fácil de preparación</h3>
                 <ol>
                     <li>Separamos las claras y las yemas de los huevos</li>
@@ -189,7 +192,7 @@
             </div>
 
             <div class="col-lg-6">
-                <img src="#" class="img-fluid rounded mb-3" alt="">
+                <img src="../img/2.jpg" class="img-fluid rounded mb-3" alt="Foto de Véneto, en Italia">
                 <h3>Origen del tiramisú</h3>
                 <p>
                     El tiramisú nació en la región del Véneto, en Italia. Su nombre significa “levántame el ánimo”,
@@ -197,7 +200,7 @@
                 </p>
                 <p>
                     Hoy en día existen muchas variantes, pero la receta clásica sigue siendo la favorita de millones de
-                    personas.
+                    personas. Buena historia Rafa. Tu te la sabes.
                 </p>
             </div>
         </div>
@@ -205,31 +208,141 @@
 
     <!-- Carrusel -->
     <section id="galeria" class="bg-dark py-5">
-        <div class="container">
-            <h2 class="mb-4">Galería de Tiramisú</h2>
+        <div id="carrusel" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="11" aria-label="Slide 12"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="12" aria-label="Slide 13"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="13" aria-label="Slide 14"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="14" aria-label="Slide 15"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="15" aria-label="Slide 16"></button>
+            </div>
 
-            <div id="carouselTiramisu" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="#" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="#" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="#" class="d-block w-100" alt="">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/3.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/4.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <h5>Cómo hacer tiramisú casero</h5>
+                        <p>En primer lugar, separamos las claras y las yemas de 2 huevos M. Reservamos las yemas.</p>
                     </div>
                 </div>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTiramisu"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselTiramisu"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+                <div class="carousel-item">
+                    <img src="../img/5.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Montamos las claras a punto de nieve hasta que estén bien firmes y las reservamos.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/6.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Batimos las yemas que habíamos reservado con 50 gramos de azúcar, hasta que hayan blanqueado
+                            y doblado su volumen, reservamos.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/7.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Ponemos 250 gramos de queso mascarpone en un bol y lo ablandamos un poco con la ayuda de una
+                            espátula o una cuchara.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/8.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Agregamos al mascarpone ablandado las yemas mezcladas con el azúcar y mezclamos bien.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/9.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>A continuación, añadimos las claras montadas y mezclamos con ayuda de una espátula, con
+                            movimientos envolventes.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/10.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Por último, mezclamos 1 taza de café frío con 30 ml de licor amaretto (opcional).</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/11.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>A continuación, vamos a montar el tiramisú. Para ello, <br> vamos mojando de uno en uno los
+                            bizcochos de soletilla en la mezcla de café y amaretto.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/12.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Colocamos los bizcochos de soletilla humedecidos en toda la base de un molde hasta que no
+                            queden huecos.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/13.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Vertemos la mitad de la crema de mascarpone sobre los bizcochos de soletilla remojados y
+                            alisamos la crema.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/14.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Sobre la capa de mascarpone, ponemos otra capa de bizcochos de <br> soletilla remojados en la
+                            mezcla de café y ameretto. En nuestro caso, hemos utilizado 24 bizcochos en total.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/15.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Ponemos encima de los bizcochos el resto de la crema de mascarpone y la alisamos.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="../img/16.jpg" class="d-block w-50 mx-auto" alt="Foto explicativa">
+                    <div class="carousel-caption d-none d-md-block text-black">
+                        <p>Espolvoreamos la superficie del tiramisú con 30 g de cacao en polvo y lo llevamos a la nevera
+                            hasta el momento de servirlo.</p>
+                    </div>
+                </div>
+
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
 
@@ -240,7 +353,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card h-100">
-                    <img src="#" class="card-img-top" alt="">
+                    <img src="../img/17.jpg" class="card-img-top" alt="Tiramisú de fresa">
                     <div class="card-body">
                         <h5 class="card-title">Tiramisú de fresa</h5>
                         <p class="card-text">Una versión fresca y afrutada ideal para verano.</p>
@@ -250,7 +363,7 @@
 
             <div class="col">
                 <div class="card h-100">
-                    <img src="#" class="card-img-top" alt="">
+                    <img src="../img/18.jpg" class="card-img-top w-100" alt="Tiramisú de chocolate">
                     <div class="card-body">
                         <h5 class="card-title">Tiramisú de chocolate</h5>
                         <p class="card-text">Más intenso, más cremoso, más irresistible.</p>
@@ -260,7 +373,7 @@
 
             <div class="col">
                 <div class="card h-100">
-                    <img src="#" class="card-img-top" alt="">
+                    <img src="../img/19.jpg" class="card-img-top" alt="Tiramisú de limón">
                     <div class="card-body">
                         <h5 class="card-title">Tiramisú de limón</h5>
                         <p class="card-text">Ligero, cítrico y sorprendente.</p>
@@ -270,11 +383,7 @@
         </div>
     </section>
 
-
-
-
-
-    <!-- FORMULARIO AMPLIO -->
+    <!-- Formulario -->
     <section id="formulario" class="py-5">
         <div class="container">
             <h2 class="mb-4">Contacto y sugerencias</h2>
@@ -302,6 +411,8 @@
         </div>
     </section>
 
+    <hr>
+
     <!-- Footer -->
     <footer class="bg-dark text-light py-5">
         <div class="container">
@@ -322,91 +433,10 @@
 
                 <div class="col-md-4">
                     <h5>Redes</h5>
-                    <p>@tiramisu_perfecto</p>
+                    <p>@tiramisuX</p>
                 </div>
             </div>
         </div>
-    </footer>
-
-    <footer class="py-5 text-warning" th:fragment="pie">
-        <div class="container">
-            <div class="row g-4">
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="bi bi-scissors me-2 fs-4"></i>
-                        <h5 class="mb-0 fw-bold">SalonPro</h5>
-                    </div>
-                    <p class="small opacity-75">
-                        Tu salón de belleza de confianza. Ofrecemos servicios profesionales de peluquería, estilismo y
-                        cuidado personal con los mejores productos del mercado.
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="mb-3 fw-bold small">CONTACTO</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2 d-flex align-items-start">
-                            <i class="bi bi-geo-alt me-2 mt-1"></i>
-                            <span class="small opacity-75">C. Condes de Bustillo, 17, 41010 Sevilla, España</span>
-                        </li>
-                        <li class="mb-2 d-flex align-items-start">
-                            <i class="bi bi-telephone me-2 mt-1"></i>
-                            <span class="small opacity-75">954 33 14 88</span>
-                        </li>
-                        <li class="mb-2 d-flex align-items-start">
-                            <i class="bi bi-envelope me-2 mt-1"></i>
-                            <span class="small opacity-75">info@salonpro.com</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="mb-3 fw-bold small">HORARIO</h5>
-                    <ul class="list-unstyled small">
-                        <li class="d-flex justify-content-between mb-2 opacity-75">
-                            <span>Lunes - Viernes:</span>
-                            <span class="opacity-100 fw-bold">9:00 - 20:00</span>
-                        </li>
-                        <li class="d-flex justify-content-between mb-2 opacity-75">
-                            <span>Sábado:</span>
-                            <span class="opacity-100 fw-bold">10:00 - 18:00</span>
-                        </li>
-                        <li class="d-flex justify-content-between mb-2 opacity-75">
-                            <span>Domingo:</span>
-                            <span class="opacity-100 fw-bold">Cerrado</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="mb-3 fw-bold small">SÍGUENOS</h5>
-                    <div class="d-flex gap-2 mb-3">
-                        <a href="#"
-                            class="btn btn-warning btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                            style="width: 35px; height: 35px;">
-                            <i class="bi bi-facebook text-dark"></i>
-                        </a>
-                        <a href="#"
-                            class="btn btn-warning btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                            style="width: 35px; height: 35px;">
-                            <i class="bi bi-instagram text-dark"></i>
-                        </a>
-                        <a href="#"
-                            class="btn btn-warning btn-sm rounded-circle d-flex align-items-center justify-content-center"
-                            style="width: 35px; height: 35px;">
-                            <i class="bi bi-twitter-x text-dark"></i>
-                        </a>
-
-                    </div>
-                </div>
-
-                <hr class="my-4 border-warning opacity-25">
-
-                <div class="text-center small opacity-75">
-                    <p class="mb-0">Copyright &copy; <strong>SalonPro</strong>. Luismi apruébame.</p>
-                </div>
-            </div>
     </footer>
 
 </body>
