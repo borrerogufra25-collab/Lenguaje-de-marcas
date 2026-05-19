@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Combinado: Tema 8 y Tema 9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        #contenedor {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .comentario {
+            color: #28a745;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Gestión del DOM con JavaScript</h1>
+    <p>Presiona el botón para ejecutar una función que utiliza variables, lee un campo de texto y crea un nuevo elemento
+        en el DOM de forma dinámica.</p>
+
+    <label for="inputTexto">Escribe un mensaje para el vecino:</label>
+    <input type="text" id="inputTexto" placeholder="Ej. Hola hola vecinito...">
+
+    <button id="btnAgregar">Agregar al Contenedor</button>
+
+    <div id="contenedor">
+        <h3>Lista de Mensajes:</h3>
+    </div>
+
+    <script>
+        // TEMA 8: Buenas prácticas -> Definimos una función para estructurar el código
+        function agregarMensaje() {
+            // TEMA 8: Uso de 'let' para declarar variables locales / de bloque
+            let inputElemento = document.getElementById('inputTexto');
+            let textoUsuario = inputElemento.value;
+
+            // Validación básica: Si está vacío, asignamos un texto por defecto al estilo de tus apuntes
+            if (textoUsuario.trim() === "") {
+                textoUsuario = "Hola hola vecinito"; // Valor predeterminado
+            }
+
+            // TEMA 9: PASO 1 - Localizar el nodo padre contenedor
+            let divContenedor = document.getElementById('contenedor');
+
+            // TEMA 9: PASO 2 - Crear el nuevo nodo elemento (un párrafo 'p')
+            let nuevoP = document.createElement('p');
+
+            // TEMA 9: PASO 3 - Añadirle contenido al nodo usando innerHTML
+            nuevoP.innerHTML = textoUsuario;
+
+            // Opcional: agregamos una clase CSS para darle estilo
+            nuevoP.className = "comentario";
+
+            // TEMA 9: PASO 4 - Añadir el nodo al documento usando append DEL NODO PADRE
+            divContenedor.append(nuevoP);
+
+            // Limpiamos el campo de entrada de texto para una nueva escritura
+            inputElemento.value = "";
+        }
+
+        // TEMA 9: Gestión de Eventos
+        // Obtenemos el botón del DOM y le asignamos un escuchador de eventos para el 'click'
+        let boton = document.getElementById('btnAgregar');
+        boton.addEventListener('click', agregarMensaje);
+    </script>
+</body>
+
+</html>
